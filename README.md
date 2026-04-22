@@ -2,6 +2,21 @@
 
 TypesXLIFF is a TypeScript / Node.js library for parsing, generating, and validating XLIFF 2.x files (2.0, 2.1 and 2.2). It includes a fully typed object model and JSON conversion for processing translation and localization data.
 
+## Quick example
+
+```ts
+
+import { XliffParser } from "typesxliff";
+
+const parser = new XliffParser();
+await parser.parseFile("file.xlf");
+
+const doc = parser.getXliffDocument();
+const segment = doc?.files[0].units[0].segments[0];
+
+console.log(segment?.source.toString());
+```
+
 ## Why TypesXLIFF
 
 - Full XLIFF 2.x object model (not just parsing)
