@@ -4,6 +4,8 @@ TypesXLIFF is a TypeScript / Node.js library for parsing, generating, and valida
 
 ## Quick example
 
+Load an XLIFF file and read the first source segment:
+
 ```ts
 
 import { XliffParser } from "typesxliff";
